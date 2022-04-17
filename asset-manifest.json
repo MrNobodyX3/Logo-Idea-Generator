@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Logo-Idea-Generator/static/css/main.19d8c646.css",
+    "main.css": "/Logo-Idea-Generator/static/css/main.dec24227.css",
     "main.js": "/Logo-Idea-Generator/static/js/main.8316c271.js",
     "static/js/787.ad19e0a5.chunk.js": "/Logo-Idea-Generator/static/js/787.ad19e0a5.chunk.js",
     "index.html": "/Logo-Idea-Generator/index.html",
-    "main.19d8c646.css.map": "/Logo-Idea-Generator/static/css/main.19d8c646.css.map",
+    "main.dec24227.css.map": "/Logo-Idea-Generator/static/css/main.dec24227.css.map",
     "main.8316c271.js.map": "/Logo-Idea-Generator/static/js/main.8316c271.js.map",
     "787.ad19e0a5.chunk.js.map": "/Logo-Idea-Generator/static/js/787.ad19e0a5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.19d8c646.css",
+    "static/css/main.dec24227.css",
     "static/js/main.8316c271.js"
   ]
 }
