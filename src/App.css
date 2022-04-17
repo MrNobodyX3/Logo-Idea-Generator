@@ -93,13 +93,13 @@
   width: 20%;
   height: 20%;
   background-color: rgb(218, 216, 158);
-  margin: 1px;
+  margin: 2px;
 }
 
 .False {
   width: 20%;
   height: 20%;
   background-color: transparent;
-  border: 2px solid rgb(218, 216, 158);
-  margin: 1px;
+  outline: 2px solid rgb(218, 216, 158);
+  margin: 2px;
 }
