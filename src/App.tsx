@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { textChangeRangeIsUnchanged } from "typescript";
 import "./App.css";
 
 function App() {
@@ -59,6 +58,8 @@ function App() {
 
   const [loadingDots, setLoadingDots] = React.useState("");
 
+  const [tether, setTether] = React.useState(false);
+
   useEffect(() => {
     if (loadingDots.length === 4) {
       setLoadingDots("");
@@ -85,14 +86,16 @@ function App() {
     return () => clearInterval(interval);
   }, [stopItem, stopStyle]);
 
-  function Tether() {
-    if (stopItem != stopStyle) {
-      setStopStyle(!stopStyle);
-    } else {
-      setStopStyle(!stopStyle);
-      setStopItem(!stopItem);
+  useEffect(() => {
+    if (tether === true) {
+      if (stopItem != stopStyle) {
+        setStopStyle(!stopStyle);
+      } else {
+        setStopStyle(!stopStyle);
+        setStopItem(!stopItem);
+      }
     }
-  }
+  }, [tether]);
 
   return (
     <div className="App">
@@ -101,18 +104,23 @@ function App() {
           Item:
           <p>
             <div className="Selection">{item}</div>
-            <button className="Button" onClick={() => setStopItem(!stopItem)}>
+            <button
+              className="Button"
+              onClick={() => (setStopItem(!stopItem), setTether(false))}
+            >
               {stopItem ? "Randomize" : "Click to Stop"}
             </button>
           </p>
-          <div className="Tether" onClick={() => Tether()}>
-            <div className={stopItem ? "True" : "False"} />
-            <div className={stopStyle ? "True" : "False"} />
+          <div className="Tether" onClick={() +}>
+            <div className={stopItem ? "True" : "False"}></div>
           </div>
           Style:
           <p>
             <div className="Selection">{style}</div>
-            <button className="Button" onClick={() => setStopStyle(!stopStyle)}>
+            <button
+              className="Button"
+              onClick={() => (setStopStyle(!stopStyle), setTether(false))}
+            >
               {stopStyle ? "Randomize" : "Click to Stop"}
             </button>
           </p>
