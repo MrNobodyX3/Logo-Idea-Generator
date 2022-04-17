@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Logo-Idea-Generator/static/css/main.af9a75a3.css",
-    "main.js": "/Logo-Idea-Generator/static/js/main.cac91615.js",
+    "main.css": "/Logo-Idea-Generator/static/css/main.15006f95.css",
+    "main.js": "/Logo-Idea-Generator/static/js/main.4866ba82.js",
     "static/js/787.ad19e0a5.chunk.js": "/Logo-Idea-Generator/static/js/787.ad19e0a5.chunk.js",
     "index.html": "/Logo-Idea-Generator/index.html",
-    "main.af9a75a3.css.map": "/Logo-Idea-Generator/static/css/main.af9a75a3.css.map",
-    "main.cac91615.js.map": "/Logo-Idea-Generator/static/js/main.cac91615.js.map",
+    "main.15006f95.css.map": "/Logo-Idea-Generator/static/css/main.15006f95.css.map",
+    "main.4866ba82.js.map": "/Logo-Idea-Generator/static/js/main.4866ba82.js.map",
     "787.ad19e0a5.chunk.js.map": "/Logo-Idea-Generator/static/js/787.ad19e0a5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.af9a75a3.css",
-    "static/js/main.cac91615.js"
+    "static/css/main.15006f95.css",
+    "static/js/main.4866ba82.js"
   ]
 }
