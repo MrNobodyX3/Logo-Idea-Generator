@@ -86,16 +86,14 @@ function App() {
     return () => clearInterval(interval);
   }, [stopItem, stopStyle]);
 
-  useEffect(() => {
-    if (tether === true) {
-      if (stopItem != stopStyle) {
-        setStopStyle(!stopStyle);
-      } else {
-        setStopStyle(!stopStyle);
-        setStopItem(!stopItem);
-      }
+  function Tether() {
+    if (stopItem != stopStyle) {
+      setStopStyle(!stopStyle);
+    } else {
+      setStopStyle(!stopStyle);
+      setStopItem(!stopItem);
     }
-  }, [tether]);
+  }
 
   return (
     <div className="App">
@@ -104,23 +102,18 @@ function App() {
           Item:
           <p>
             <div className="Selection">{item}</div>
-            <button
-              className="Button"
-              onClick={() => (setStopItem(!stopItem), setTether(false))}
-            >
+            <button className="Button" onClick={() => setStopItem(!stopItem)}>
               {stopItem ? "Randomize" : "Click to Stop"}
             </button>
           </p>
-          <div className="Tether" onClick={() +}>
-            <div className={stopItem ? "True" : "False"}></div>
+          <div className="Tether" onClick={() => Tether()}>
+            <div className={stopItem ? "True" : "False"} />
+            <div className={stopStyle ? "True" : "False"} />
           </div>
           Style:
           <p>
             <div className="Selection">{style}</div>
-            <button
-              className="Button"
-              onClick={() => (setStopStyle(!stopStyle), setTether(false))}
-            >
+            <button className="Button" onClick={() => setStopStyle(!stopStyle)}>
               {stopStyle ? "Randomize" : "Click to Stop"}
             </button>
           </p>
