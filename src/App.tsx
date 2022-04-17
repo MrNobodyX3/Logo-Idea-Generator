@@ -64,7 +64,7 @@ function App() {
     } else {
       setTimeout(() => {
         setLoadingDots(loadingDots + ".");
-      }, 1000);
+      }, 500);
     }
   }, [loadingDots]);
 
@@ -80,7 +80,7 @@ function App() {
           styleList[Math.floor(Math.random() * styleList.length)];
         setStyle(randomStyle);
       }
-    }, 1);
+    }, 25);
     return () => clearInterval(interval);
   }, [stopItem, stopStyle]);
 
@@ -113,7 +113,7 @@ function App() {
         ) : (
           <div className="Description">
             <h1>Description</h1>
-            <p>Loading{loadingDots}</p>
+            <p>Loading{loadingDots}|</p>
           </div>
         )}
       </header>
