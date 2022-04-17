@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { textChangeRangeIsUnchanged } from "typescript";
 import "./App.css";
 
 function App() {
@@ -84,6 +85,15 @@ function App() {
     return () => clearInterval(interval);
   }, [stopItem, stopStyle]);
 
+  function Tether() {
+    if (stopItem != stopStyle) {
+      setStopStyle(!stopStyle);
+    } else {
+      setStopStyle(!stopStyle);
+      setStopItem(!stopItem);
+    }
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -95,6 +105,10 @@ function App() {
               {stopItem ? "Randomize" : "Click to Stop"}
             </button>
           </p>
+          <div className="Tether" onClick={() => Tether()}>
+            <div className={stopItem ? "True" : "False"} />
+            <div className={stopStyle ? "True" : "False"} />
+          </div>
           Style:
           <p>
             <div className="Selection">{style}</div>
